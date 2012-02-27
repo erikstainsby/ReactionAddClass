@@ -6,10 +6,9 @@
 //  Copyright (c) 2012 Roaring Sky. All rights reserved.
 //
 
-#import <RSTrixiePlugin/RSTrixiePlugin.h>
+#import <RSTrixiePlugin/RSReactionPlugin.h>
 
-@interface ReactionAddClass : RSTrixiePlugin
+@interface ReactionAddClass : RSReactionPlugin
 
-@property (retain) IBOutlet NSTextField * addClassField;
 
 @end

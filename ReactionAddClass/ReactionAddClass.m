@@ -10,37 +10,18 @@
 
 @implementation ReactionAddClass
 
-@synthesize addClassField;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	
     if( nil != (self = [super initWithNibName:nibNameOrNil	bundle:nibBundleOrNil]))
     {
-		[self setName: @"Add Class"];
+		[self setPluginName: @"Add Class"];
     }
     return self;
 }
 
-- (BOOL) hasSelectorField {
-	return YES;
+- (NSString *) callback {
+	return [NSString stringWithFormat:@"$('%@').addClass('%@')",[[self targetField] stringValue],[[self deltaField] stringValue]];
 }
 
-- (NSString *) reactionBehaviour {
-	return [NSString stringWithFormat:@".addClass('%@')",[addClassField stringValue]];
-}
-
-- (NSString *) callbackFunction {
-	
-	NSString * myFunc = @"";
-	if( [[[self selectorField] stringValue] isEqualToString:@"this"] ) {
-		myFunc = @"$(this)";
-	}
-	else {
-		myFunc = [myFunc stringByAppendingFormat:@"$('%@')", [[self selectorField] stringValue]];
-	}
-	myFunc = [myFunc stringByAppendingString: [self reactionBehaviour]];
-	
-	return [NSString stringWithFormat:@"function(event,elem){%@}", myFunc];
-}
 
 @end

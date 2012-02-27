@@ -44,7 +44,7 @@
 					<object class="NSTextField" id="598833270">
 						<reference key="NSNextResponder" ref="818644827"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{5, 15}, {75, 17}}</string>
+						<string key="NSFrame">{{5, 43}, {75, 17}}</string>
 						<reference key="NSSuperview" ref="818644827"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="628579028"/>
@@ -84,10 +84,9 @@
 					<object class="NSTextField" id="628579028">
 						<reference key="NSNextResponder" ref="818644827"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{105, 12}, {200, 22}}</string>
+						<string key="NSFrame">{{105, 40}, {200, 22}}</string>
 						<reference key="NSSuperview" ref="818644827"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:903</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="290571460">
@@ -119,7 +118,7 @@
 					<object class="NSTextField" id="424618348">
 						<reference key="NSNextResponder" ref="818644827"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{5, 42}, {76, 17}}</string>
+						<string key="NSFrame">{{5, 70}, {76, 17}}</string>
 						<reference key="NSSuperview" ref="818644827"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="74983289"/>
@@ -139,7 +138,7 @@
 					<object class="NSTextField" id="74983289">
 						<reference key="NSNextResponder" ref="818644827"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{105, 39}, {200, 22}}</string>
+						<string key="NSFrame">{{105, 67}, {200, 22}}</string>
 						<reference key="NSSuperview" ref="818644827"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="598833270"/>
@@ -159,7 +158,7 @@
 						</object>
 					</object>
 				</object>
-				<string key="NSFrameSize">{410, 74}</string>
+				<string key="NSFrameSize">{410, 102}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="424618348"/>
@@ -171,27 +170,27 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">addClassField</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="74983289"/>
-					</object>
-					<int key="connectionID">18</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">selectorField</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="628579028"/>
-					</object>
-					<int key="connectionID">19</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="818644827"/>
 					</object>
 					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">targetField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="628579028"/>
+					</object>
+					<int key="connectionID">21</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">deltaField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="74983289"/>
+					</object>
+					<int key="connectionID">22</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -338,26 +337,30 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">27</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">RSTrixiePlugin</string>
-					<string key="superclassName">NSViewController</string>
+					<string key="className">RSReactionPlugin</string>
+					<string key="superclassName">RSTrixiePlugin</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>name</string>
-							<string>rules</string>
-							<string>selectorField</string>
+							<string>delayField</string>
+							<string>deltaField</string>
+							<string>durationField</string>
+							<string>pluginName</string>
+							<string>targetField</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSString</string>
-							<string>NSMutableArray</string>
 							<string>NSTextField</string>
 						</object>
 					</object>
@@ -365,24 +368,53 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>name</string>
-							<string>rules</string>
-							<string>selectorField</string>
+							<string>delayField</string>
+							<string>deltaField</string>
+							<string>durationField</string>
+							<string>pluginName</string>
+							<string>targetField</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">name</string>
+								<string key="name">delayField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">deltaField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">durationField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">pluginName</string>
 								<string key="candidateClassName">NSString</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">rules</string>
-								<string key="candidateClassName">NSMutableArray</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">selectorField</string>
+								<string key="name">targetField</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/RSReactionPlugin.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">RSTrixiePlugin</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">pluginName</string>
+						<string key="NS.object.0">NSString</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">pluginName</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">pluginName</string>
+							<string key="candidateClassName">NSString</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -392,18 +424,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">ReactionAddClass</string>
-					<string key="superclassName">RSTrixiePlugin</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">addClassField</string>
-						<string key="NS.object.0">NSTextField</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">addClassField</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">addClassField</string>
-							<string key="candidateClassName">NSTextField</string>
-						</object>
-					</object>
+					<string key="superclassName">RSReactionPlugin</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/ReactionAddClass.h</string>
