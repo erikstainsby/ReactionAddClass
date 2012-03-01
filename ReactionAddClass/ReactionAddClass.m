@@ -18,10 +18,10 @@
 		[self setAction:@"addClass"];
     }
     return self;
-}
+} 
 
 - (NSString *) callback {
-	return [NSString stringWithFormat:@"$('%@').%@('%@')",[[self targetField] stringValue],[self action],[[self deltaField] stringValue]];
+	return [NSString stringWithFormat:@"$('%@').%@('%@');",[[self targetField] stringValue],[self action],[[self deltaField] stringValue]];
 }
 
 
