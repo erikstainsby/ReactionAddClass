@@ -15,12 +15,13 @@
     if( nil != (self = [super initWithNibName:nibNameOrNil	bundle:nibBundleOrNil]))
     {
 		[self setPluginName: @"Add Class"];
+		[self setAction:@"addClass"];
     }
     return self;
 }
 
 - (NSString *) callback {
-	return [NSString stringWithFormat:@"$('%@').addClass('%@')",[[self targetField] stringValue],[[self deltaField] stringValue]];
+	return [NSString stringWithFormat:@"$('%@').%@('%@')",[[self targetField] stringValue],[self action],[[self deltaField] stringValue]];
 }
 
 
